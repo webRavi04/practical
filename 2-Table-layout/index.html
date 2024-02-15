@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table with Tooltips</title>
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background-color: #d401f0;
+            color: #fff;
+        }
+
+        .table-container {
+            padding: 50px;
+            height: 100%;
+        }
+
+        .table {
+            display: table;
+            border-spacing: 50px;
+            border-collapse: separate;
+            table-layout: fixed;
+            width: 100%;
+            height: 100%;
+        }
+
+        .row {
+            display: table-row;
+        }
+
+        .cell {
+            display: table-cell;
+            width: calc(100% / 3);
+            border: 1px solid;
+            position: relative;
+            padding: 4px;
+            height: 80px;
+            cursor: pointer;
+        }
+
+        .tooltip {
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            background-color: rgba(0, 0, 0, 0.4);
+            color: #fff;
+            padding: 5px;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .cell:hover .tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="table-container">
+        <div class="table">
+            <div class="row">
+                <div class="cell">
+                    Header 1
+                    <div class="tooltip">Tooltip 1</div>
+                </div>
+                <div class="cell">
+                    Header 2
+                    <div class="tooltip">Tooltip 2</div>
+                </div>
+                <div class="cell">
+                    Header 3
+                    <div class="tooltip">Tooltip 3</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="cell">
+                    Row 1
+                    <div class="tooltip">Tooltip 4</div>
+                </div>
+                <div class="cell">
+                    Row 1
+                    <div class="tooltip">Tooltip 5</div>
+                </div>
+                <div class="cell">
+                    Row 1
+                    <div class="tooltip">Tooltip 6</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="cell">
+                    Row 2
+                    <div class="tooltip">Tooltip 7</div>
+                </div>
+                <div class="cell">
+                    Row 2
+                    <div class="tooltip">Tooltip 8</div>
+                </div>
+                <div class="cell">
+                    Row 2
+                    <div class="tooltip">Tooltip 9</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="cell">
+                    Row 3
+                    <div class="tooltip">Tooltip 10</div>
+                </div>
+                <div class="cell">
+                    Row 3
+                    <div class="tooltip">Tooltip 11</div>
+                </div>
+                <div class="cell">
+                    Row 3
+                    <div class="tooltip">Tooltip 12</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
